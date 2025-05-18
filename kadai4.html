@@ -36,7 +36,9 @@
                     console.log("商品は以下の" + Item.number + "種類です。");
 
                     // 配列の内容を項目毎に出力
-                    // 課題4-1. ここにコードを書く
+                    for(let i=0; i<item_list.length; i++){
+                        console.log("商品番号: "+item_list[i].id+", 商品名: "+item_list[i].name+", 金額： "+item_list[i].price+", 在庫数： "+item_list[i].stock);
+                    }
                     console.log(""); // 空行の出力
                 }
                 
@@ -61,10 +63,24 @@
             const item_list = new Array(items.length);
             const btn = new Array(items.length);
 
-            // 課題4-1. ここにコード書く
+            item_list[0] = new Item("緑茶",140,5) 
+            item_list[1] = new Item("水",100,14) 
+            item_list[2] = new Item("オレンジジュース",150,7) 
+            item_list[3] = new Item("りんごジュース",150,9) 
+            item_list[4] = new Item("炭酸水",120,1) 
+            item_list[5] = new Item("サイダー",160,3) 
+            item_list[6] = new Item("コーヒー",170,8) 
+            item_list[7]= new Item("紅茶",140,6) 
             // 商品オブジェクトの生成
 
-            // 課題4-2. ここにコードを書く
+            itemArea.innerHTML += '<tr><td>緑茶</td><td>140</td><th>5</th><th><button type="button" name="name" value="value">購入</button></tr>';
+            itemArea.innerHTML += '<tr><td>水</td><td>100</td><th>14</th><th><button type="button" name="name" value="value">購入</button></th></tr>';
+            itemArea.innerHTML += '<tr><td>オレンジジュース</td><td>150</td><th>7</th><th><button type="button" name="name" value="value">購入</button></th></tr>';
+            itemArea.innerHTML += '<tr><td>りんごジュース</td><td>150</td><th>9</th><th><button type="button" name="name" value="value">購入</button></th></tr>';
+            itemArea.innerHTML += '<tr><td>炭酸水</td><td>120</td><th>1</th><th><button type="button" name="name" value="value">購入</button></th></tr>';
+            itemArea.innerHTML += '<tr><td>サイダー</td><td>160</td><th>3</th><th><button type="button" name="name" value="value">購入</button></th></tr>';
+            itemArea.innerHTML += '<tr><td>コーヒー</td><td>170</td><th>8</th><th><button type="button" name="name" value="value">購入</button></th>';
+            itemArea.innerHTML += '</tr><tr><td>紅茶</td><td>140</td><th>6</th><th><button type="button" name="name" value="value">購入</button></th></tr>';
             // 商品表の作成
 
             // クリックイベント時の購入処理の設定
